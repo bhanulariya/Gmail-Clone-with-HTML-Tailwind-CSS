@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <title>Gmail UI</title>
+</head>
+
+<body class="bg-[#F6F8FC] w-screen h-screen">
+
+    <div class="flex w-full">
+
+        <!-- Aside-1 -->
+
+        <section class="aside-menu flex justify-center items-start w-[7%] h-screen bg-[#eaf1fb]">
+
+            <aside class="flex flex-col space-y-[30px] justify-center items-center">
+
+                <div class="flex w-3 h-4 items-center justify-center mt-5">
+                    <i class=" fa-solid fa-bars  scale-[1.4] hover:py-2 hover:px-2 hover:bg-gray-200 hover:rounded-2xl transition-bg duration-75 ease-in-out cursor-pointer"></i>
+
+                </div>
+
+                <ul class="h-full flex flex-col justify-center space-y-8">
+
+                    <li class="flex mt-4 flex-col items-center space-y-5">
+
+                        <div class="flex items-center justify-center w-2 h-2">
+                            <i class="fa-regular fa-envelope scale-[1.3] hover:py-2 hover:px-2 hover:bg-[#d3e3fd] rounded-2xl transition-bg ease-in-out cursor-pointer duration-75"></i>
+
+                        </div>
+
+                        <span>Mail</span>
+
+                    </li>
+
+                    <li class="flex mt-4 flex-col items-center space-y-5">
+
+                        <div class="flex items-center justify-center w-2 h-2">
+                            <i class="fa-regular fa-message scale-[1.3] hover:py-2 hover:px-2 hover:bg-[#d3e3fd] hover:rounded-2xl transition-bg duration-75 ease-in-out cursor-pointer"></i>
+
+                        </div>
+
+                        <span>Chat</span>
+
+                    </li>
+
+                    <li class="flex mt-4 flex-col items-center space-y-5">
+
+                        <div class="flex items-center justify-center w-2 h-2">
+                            <i class="text-gray-800 fa-solid fa-users scale-[1.3] hover:py-2 hover:px-2 hover:bg-[#d3e3fd] hover:rounded-2xl transition-bg duration-75 ease-in-out cursor-pointer"></i>
+
+                        </div>
+
+                        <span>Spaces</span>
+
+                    </li>
+
+                    <li class="flex mt-4 flex-col items-center space-y-5">
+
+                        <div class="flex items-center justify-center w-2 h-2">
+                            <i class="text-gray-800 fa-solid fa-video scale-[1.3] hover:py-2 hover:px-2 hover:bg-[#d3e3fd] transition-bg duration-200 ease-in-out hover:rounded-2xl cursor-pointer"></i>
+
+                        </div>
+
+                        <span>Meet</span>
+
+                    </li>
+
+                </ul>
+
+            </aside>
+
+        </section>
+
+        <!-- Aside-2 -->
+
+        <section class="aside bg-[#F6F8FC] p-4 w-[25%] h-screen">
+
+            <div class="flex cursor-pointer items-center space-x-2 mb-7">
+                <img class="h-6" src="assets/Gmail_icon_(2020).svg.png" alt="">
+                <span class="text-2xl font-semibold text-gray-600">Gmail</span>
+            </div>
+
+            <span class="flex bg-[#C2E7FF] items-center font-semibold justify-between w-36 rounded-2xl space-x-2 py-3 transition-shadow duration-75 ease-in-out cursor-pointer hover:shadow-[1px_3px_8px_0px_rgba(0,0,0,0.5)] shadow-black px-5 border">
+                <i class="fa-solid fa-pen"></i>
+                Compose
+            </span>
+
+            <ul class="flex flex-col space-y-2 mt-5">
+                <li class="font-semibold space-x-5 bg-[#D3E3FD] flex transition-bg duration-150 ease-in-out items-center rounded-2xl cursor-pointer py-1 px-4">
+                    <i class="fa-solid fa-inbox"></i> <span>Inbox</span>
+                </li>
+                <li class="hover:font-semibold space-x-5 hover:bg-gray-200 flex transition-bg duration-150 ease-in-out items-center rounded-2xl cursor-pointer py-1 px-4">
+                    <i class="fa-regular fa-star"></i> <span>Starred</span>
+                </li>
+                <li class="hover:font-semibold space-x-5 hover:bg-gray-200 flex transition-bg duration-150 ease-in-out items-center rounded-2xl cursor-pointer py-1 px-4">
+                    <i class="fa-regular fa-clock"></i> <span>Snoozed</span>
+                </li>
+                <li class="hover:font-semibold space-x-5 hover:bg-gray-200 flex transition-bg duration-150 ease-in-out items-center rounded-2xl cursor-pointer py-1 px-4">
+                    <i class="fa-regular fa-paper-plane"></i> <span>Sent</span>
+                </li>
+                <li class="hover:font-semibold space-x-5 hover:bg-gray-200 flex transition-bg duration-150 ease-in-out items-center rounded-2xl cursor-pointer py-1 px-4">
+                    <i class="fa-regular fa-file-lines"></i> <span>Draft</span>
+                </li>
+                <li class="hover:font-semibold space-x-5 hover:bg-gray-200 flex transition-bg duration-150 ease-in-out items-center rounded-2xl cursor-pointer py-1 px-4">
+                    <i class="fa-solid fa-angle-down"></i> <span>More</span>
+                </li>
+            </ul>
+
+            <div class="flex items-center justify-between py-2 px-2 h-16">
+                <span class="text-[1.2rem] font-semibold">Labels</span>
+                <div class="flex items-center justify-center w-4 h-2">
+                    <i class="fa-solid fa-plus cursor-pointer hover:bg-gray-200 duration-200 ease-in-out hover:px-3 hover:py-3 rounded-3xl "></i>
+
+                </div>
+            </div>
+            <ul>
+                <li class="flex justify-between items-center space-x-3  hover:font-semibold hover:bg-gray-200 transition-bg duration-200 ease-in-out rounded-2xl cursor-pointer py-1 px-4">
+                    <div>
+                        <i class="mr-2 fa-regular fa-bookmark"></i>
+                        <span class="font-semibold">Scrum</span>
+                    </div>
+
+
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- Mid Nav -->
+
+        <section class="flex flex-col w-full h-full">
+            <nav class="nav-mid flex items-center justify-between w-full h-[10%]">
+                <div>
+                    <div class="bg-[#EAF1FB] w-[700px] flex items-center justify-between px-2 py-1.5 my-2 rounded-3xl">
+                        <div class="flex items-center justify-center w-12 h-2">
+                            <i class="fa-solid fa-magnifying-glass cursor-pointer rounded-3xl duration-100 hover:bg-gray-200 hover:px-3 hover:py-3"></i>
+
+                        </div>
+
+                        <input class="w-full px-2 mx-2 outline-none  bg-transparent placeholder-gray-800 text-[1.1rem]" placeholder="Search mail" type="search">
+
+                        <div class="flex items-center justify-center w-12 h-2">
+                            <i class="fa-solid fa-sliders cursor-pointer duration-100 hover:bg-gray-200 rounded-3xl hover:px-3 hover:py-3"></i>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="flex cursor-pointer items-center gap-2 bg-[#EAF1FB] h-[9vh] 2xl:h-[6vh] px-4 rounded-full font-semibold">
+
+                    <div class="h-3 w-3 bg-green-700 rounded-full"></div>
+                    <p>Active</p>
+                    <i class="opacity-[0.6] fa-solid fa-caret-down"></i>
+
+                </div>
+
+                <div class="flex h-full px-2 space-x-5 justify-end items-center">
+                    <div class="flex items-center justify-center w-12 h-2">
+                        <i class="opacity-[0.6] fa-regular fa-circle-question scale-[1.3] rounded-3xl transition-bg duration-100 ease-in-out cursor-pointer hover:bg-gray-200 hover:py-2 hover:px-2"></i>
+
+                    </div>
+
+                    <div class="flex items-center justify-center w-12 h-2">
+                        <i class="opacity-[0.6] fa-solid fa-gear scale-[1.3] rounded-3xl hover:bg-gray-200 hover:py-2 cursor-pointer duration-100 ease-in-out hover:px-2"></i>
+
+                    </div>
+
+                    <div class="flex items-center justify-center w-12 h-10">
+                        <img class="h-7 hover:h-11 rounded-3xl hover:bg-gray-200 hover:py-2 hover:px-2 cursor-pointer duration-100 ease-in-out" src="assets/free-dots-nine-3602636-3003318.png" alt="">
+
+                    </div>
+
+                </div>
+            </nav>
+
+            <!-- Main -->
+
+            <main class="flex flex-col  rounded-2xl w-full h-full bg-white">
+
+                <section class="flex space-x-5 justify-between items-center px-2 py-1">
+                    <div class="flex items-center px-2 space-x-1">
+                        <input class="w-3 h-3" id="check" name="check" type="checkbox">
+                        <label class="px-1 py-2  cursor-pointer rounded transition-bg duration-100 ease-in-out hover:bg-gray-200" for="check"><i class="opacity-[0.6] fa-solid fa-caret-down"></i></label>
+                        <div class="h-4 w-8 flex items-center cursor-pointer justify-center">
+                            <i class="hover:px-3 opacity-[0.6] rounded-full hover:py-3 cursor-pointer duration-75 ease-in-out hover:bg-gray-200 fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="h-4 w-8 flex items-center justify-center cursor-pointer">
+                            <i class="hover:px-5 opacity-[0.6] hover:py-3 rounded-full cursor-pointer hover:bg-gray-200 transition-bg duration-75 ease-in-out fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-1 items-center">
+                        <div class="flex items-center justify-center w-28 h-2">
+                            <span class="text-[0.9rem] opacity-[0.6] cursor-pointer hover:bg-gray-200 transition-bg duration-100 ease-in-out hover:py-2 rounded-xl hover:px-3">1-50 of 8,546</span>
+
+                        </div>
+
+                        <i class="opacity-[0.6] py-3 transition-bg duration-100 ease-in-out rounded-full px-4 fa-solid fa-angle-left"></i>
+
+                        <div class="flex items-center justify-center w-7 mr-2 h-2">
+                            <i class="cursor-pointer hover:bg-gray-200 hover:py-3 transition-bg duration-100 ease-in-out rounded-full hover:px-4 fa-solid fa-angle-right"></i>
+
+                        </div>
+
+                        <div class="flex items-center justify-center w-6 mr-2 h-4">
+                            <i class="hover:bg-gray-200 cursor-pointer transition-bg duration-100 ease-in-out rounded hover:py-2 hover:px-1 fa-solid fa-keyboard"></i>
+
+                        </div>
+
+                        <div class="flex items-center justify-center w-4 mr-2 h-2">
+                            <i class="hover:bg-gray-200 transition-bg cursor-pointer duration-100 ease-in-out hover:py-2 rounded hover:px-1 fa-solid fa-caret-down"></i>
+
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Primary -->
+                <section class="flex w-full">
+                    <div class="flex  relative cursor-pointer px-4 text-blue-700  py-4 hover:bg-neutral-100 justify-start items-center w-[200px]">
+                        <i class=" mr-4 fa-solid fa-inbox"></i>
+                        <span class="text-[1rem] ">
+                            Primary
+                        </span>
+                        <div class="absolute bottom-0 left-2 w-44 h-1 bg-[#0B57D0] rounded-full">
+
+                        </div>
+                    </div>
+                    <div class="flex cursor-pointer hover:bg-neutral-100 px-4 justify-start items-center w-[200px]">
+                        <i class="opacity-[0.7] mr-4 fa-solid fa-tag"></i>
+                        <span class=" text-[1rem] text-gray-700">
+                            Promotions
+                        </span>
+                    </div>
+                    <div class="flex cursor-pointer hover:bg-neutral-100 px-4 justify-start items-center w-[200px]">
+                        <i class="opacity-[0.7] mr-4 fa-solid fa-user-group"></i>
+                        <span class=" text-[1rem] text-gray-700">
+                            Social
+                        </span>
+                    </div>
+                    <div class="flex cursor-pointer hover:bg-neutral-100 px-4 justify-start items-center w-[200px]">
+                        <i class="opacity-[0.7] mr-4 fa-solid fa-circle-exclamation"></i>
+                        <span class=" text-[1rem] text-gray-700">
+                            Updates
+                        </span>
+                    </div>
+                </section>
+
+                <!-- Inbox -->
+                <section class="flex flex-col  overflow-y-scroll cursor-pointer w-full h-[510px]">
+
+                    <!-- Mails -->
+
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex px-1 group hover:shadow-[0px_0px_3px_0.1px_rgba(0,0,0,0.8)] items-center justify-between">
+                        <div class="flex  px-0 items-center space-x-1 min-w-[30%]">
+                            <i class=" opacity-[0] group-hover:opacity-[0.3] fa-solid fa-grip-vertical"></i>
+                            <input class="opacity-[0.3] group-hover:opacity-[1] shadow-lg  w-3.5 h-3.5" id="" name="check" type="checkbox">
+                            <i class=" opacity-[0.5] scale-1 group-hover:opacity-[0.8] hover:bg-gray-200 rounded-full py-3 px-3 fa-regular fa-star"></i>
+                            <img class="w-6" src="https://ssl.gstatic.com/ui/v1/icons/mail/gm3/2x/label_important_fill_googyellow500_20dp.png" alt="important tag" />
+                            <span class="font-semibold">PW</span>
+                        </div>
+                        <div class="flex space-x-1 items-center min-w-[50%]">
+                            <span class="font-semibold">Important mail for 2 step verification</span>
+                            <span>-</span>
+                            <p>cccccccccccccc..........</p>
+                        </div>
+                        <span class="flex group-hover:hidden items-center justify-end min-w-[20%]">15:00</span>
+                        <div class="hidden group-hover:flex items-center justify-around w-[25%]">
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-5 opacity-[0.7]" fill="#000000" viewBox="0 0 256 256" id="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M227.93457,74.75c-.00293-.02686-.00928-.05322-.01221-.08008-.043-.38867-.10254-.77246-.18164-1.14941-.00927-.04248-.02343-.084-.03271-.127-.08008-.35986-.17285-.71484-.28418-1.06152-.02442-.07617-.05615-.14941-.082-.2251-.10645-.30957-.21973-.61523-.34961-.91259-.00977-.02246-.0166-.0459-.02637-.06836l-16-36A12.00047,12.00047,0,0,0,200,28H56a12.00047,12.00047,0,0,0-10.96582,7.126l-16,36c-.00977.02246-.0166.0459-.02637.06836-.12988.29736-.24316.603-.34961.91259-.02588.07569-.05761.14893-.082.2251-.1123.34863-.20508.70508-.28515,1.0669-.00928.04052-.02295.08056-.03125.12109-.07959.37744-.13916.76123-.18213,1.15088-.00293.02637-.00928.05273-.01221.0791A12.15078,12.15078,0,0,0,28,76V208a20.02229,20.02229,0,0,0,20,20H208a20.02229,20.02229,0,0,0,20-20V76A12.15078,12.15078,0,0,0,227.93457,74.75ZM192.20117,52l5.3335,12H58.46533l5.3335-12ZM52,204V88H204V204Zm112.76953-60.76953a11.99975,11.99975,0,0,1,0,16.9707l-28.28418,28.28418c-.01855.01856-.03906.03369-.05762.05225q-.394.38892-.82128.7417c-.14112.11621-.29.21728-.43555.32617-.168.12549-.33252.25586-.50733.37305-.17138.11425-.34912.21386-.5249.31836-.16015.09619-.31738.19677-.48291.28564-.17822.09521-.36133.17578-.543.26172-.17334.08154-.34326.168-.521.2417-.17676.07324-.35742.13183-.53711.19629-.18946.06836-.377.14111-.57129.20019-.17969.0542-.36182.09375-.543.13965-.19824.04981-.394.10547-.59619.14551-.2085.041-.41944.06592-.62988.09619-.17676.02539-.35108.05908-.53077.07666C128.79,191.979,128.395,192,128,192s-.79-.021-1.18359-.05957c-.17969-.01758-.354-.05127-.53077-.07666-.21044-.03027-.42138-.05518-.62988-.09619-.20215-.04-.39795-.0957-.59619-.14551-.18115-.0459-.36328-.08545-.543-.13965-.19433-.05908-.38232-.13183-.57226-.20019-.1792-.06446-.35938-.12305-.53614-.19629-.17773-.07373-.34814-.16016-.52148-.24219-.18164-.08545-.36475-.166-.54248-.26123-.16553-.08887-.32276-.18945-.48291-.28564-.17578-.1045-.35352-.20411-.5249-.31836-.17481-.11719-.33936-.24756-.50733-.37305-.14551-.10889-.29443-.21-.43555-.32617q-.42846-.35157-.82128-.7417c-.01856-.01856-.03907-.03369-.05762-.05225L91.23047,160.20117a12.0001,12.0001,0,0,1,16.9707-16.9707L116,151.0293V112a12,12,0,0,1,24,0v39.0293l7.79883-7.79883A12.00151,12.00151,0,0,1,164.76953,143.23047Z"/>
+                                </svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></svg>
+
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M255.4 48.2c.2-.1 .4-.2 .6-.2s.4 .1 .6 .2L460.6 194c2.1 1.5 3.4 3.9 3.4 6.5v13.6L291.5 355.7c-20.7 17-50.4 17-71.1 0L48 214.1V200.5c0-2.6 1.2-5 3.4-6.5L255.4 48.2zM48 276.2L190 392.8c38.4 31.5 93.7 31.5 132 0L464 276.2V456c0 4.4-3.6 8-8 8H56c-4.4 0-8-3.6-8-8V276.2zM256 0c-10.2 0-20.2 3.2-28.5 9.1L23.5 154.9C8.7 165.4 0 182.4 0 200.5V456c0 30.9 25.1 56 56 56H456c30.9 0 56-25.1 56-56V200.5c0-18.1-8.7-35.1-23.4-45.6L284.5 9.1C276.2 3.2 266.2 0 256 0z"/></svg>
+                            </div>
+                            <div class="hover:bg-gray-200 rounded-full px-2 py-2">
+                                <svg class="h-4 opacity-[0.7]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </section>
+
+            </main>
+
+        </section>
+
+        <!-- Aside Left -->
+
+        <section class="flex flex-col items-center w-[5%] py-3">
+
+            <span class="flex text-center cursor-pointer justify-center text-white font-semibold text-[1.1rem] items-center py-2 w-[42px]  bg-purple-400 rounded-full">B</span>
+            <div class="flex flex-col items-center justify-between h-full">
+                <div>
+                    <img class="h-10 cursor-pointer m-4 rounded-full hover:bg-gray-200 py-2 px-2 transition-bg duration-100 ease-in-out" src="assets/calendar.png" alt="">
+                    <img class="h-10 cursor-pointer m-4 rounded-full hover:bg-gray-200 py-2 px-2 transition-bg duration-100 ease-in-out" src="assets/keep_2020q4v3_2x.png" alt="">
+                    <img class="h-10 cursor-pointer m-4 rounded-full hover:bg-gray-200 py-2 px-2 transition-bg duration-100 ease-in-out" src="assets/Google_Tasks_2021.svg" alt="">
+                    <img class="h-10 cursor-pointer m-4 rounded-full hover:bg-gray-200 py-2 px-2 transition-bg duration-100 ease-in-out" src="assets/Google_Contacts_icon_(2022).svg.png" alt="">
+                    <hr>
+                    <i class="fa-solid fa-plus scale-[1.1] cursor-pointer m-5 rounded-full hover:bg-gray-200 py-2 px-2 transition-bg duration-100 ease-in-out"></i>
+
+                </div>
+
+                <i class="fa-solid fa-angle-right py-3 cursor-pointer px-4 rounded-full hover:bg-gray-200"></i>
+            </div>
+
+
+
+        </section>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>
